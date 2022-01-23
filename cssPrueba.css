@@ -5,7 +5,7 @@ body {
     min-height: 450px;
     height: 100vh;
     margin: 0;
-    background: radial-gradient(circle, #fafbfc, #9bbcee, #799df0, rgb(119, 106, 236));
+    background: radial-gradient(circle, #fafafa, #aceca7, #a4f58b, rgb(79, 167, 71));
 }
 
 .stage {
@@ -33,7 +33,7 @@ body {
 
 .layer:after {
     font: 150px/0.65 "Pacifico", "Kaushan Script", Futura, "Roboto", "Trebuchet MS", Helvetica, sans-serif;
-    content: "Point touching!";
+    content: "On the spot";
     white-space: pre;
     text-align: center;
     height: 100%;
@@ -130,12 +130,12 @@ body {
 }
 
 .layer:nth-child(n+11):after {
-    -webkit-text-stroke: 15px rgb(141, 142, 241);
-    text-shadow: 6px 0 6px #00366b, 5px 5px 5px #002951, 0 6px 6px #00366b;
+    -webkit-text-stroke: 15px rgb(44, 139, 44);
+    text-shadow: 6px 0 6px #4fb321, 5px 5px 5px #339b49, 0 6px 6px #2a990e;
 }
 
 .layer:nth-child(n+12):after {
-    -webkit-text-stroke: 15px #3a3c85;
+    -webkit-text-stroke: 15px #03360c;
 }
 
 .layer:last-child:after {
@@ -157,12 +157,12 @@ body {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
-    text-shadow: 3px 2px 1px #9daef5;
+    text-shadow: 3px 2px 1px #044707;
     -webkit-box-shadow: 6px 5px 24px #666666;
-    -moz-box-shadow: 6px 5px 24px #666666;
-    box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #094e07;
+    box-shadow: 6px 5px 24px #1c6e14;
     font-family: Arial;
-    color: #fafafa;
+    color: #c4f7c2;
     font-size: 27px;
     padding: 19px;
     text-decoration: none;
