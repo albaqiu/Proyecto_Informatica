@@ -12,7 +12,8 @@ body {
     height: 800px;
     width: 850px;
     margin: auto;
-    position: absolute;
+    /*position: absolute*/
+    ;
     top: 0;
     right: 0;
     bottom: 0;
@@ -25,6 +26,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+    ;
     transform-style: preserve-3d;
     animation: ಠ_ಠ 5s infinite alternate ease-in-out -7.5s;
     animation-fill-mode: forwards;
@@ -167,4 +169,43 @@ body {
     padding: 19px;
     text-decoration: none;
     margin-top: 30%;
+    justify-content: center;
+    width: 300px;
+}
+
+.otroBoton {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    text-shadow: 3px 2px 1px #044707;
+    -webkit-box-shadow: 6px 5px 24px #666666;
+    -moz-box-shadow: 6px 5px 24px #094e07;
+    box-shadow: 6px 5px 24px #1c6e14;
+    font-family: Arial;
+    color: #c4f7c2;
+    font-size: 27px;
+    padding: 19px;
+    text-decoration: none;
+    margin-top: 30%;
+    margin: 10px;
+    width: 300px;
+}
+
+.recuadro {
+    display: flex;
+    background: #e2fdf4;
+    color: #2a990e;
+    font-weight: bold;
+    padding: 40px;
+    border: 10px solid #2a990e;
+    border-radius: 150px;
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
