@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     mediapipe()
 };
 
@@ -33,8 +33,8 @@ function mediapipe() {
         canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
 
         canvasCtx.globalCompositeOperation = 'source-over';
-        drawConnectors(canvasCtx, results.poseLandmarks, POSE_CONNECTIONS, { color: '#FFFFFF', lineWidth: 1 });
-        drawLandmarks(canvasCtx, results.poseLandmarks, { color: '#000000', lineWidth: 1 });
+        drawConnectors(canvasCtx, results.poseLandmarks, POSE_CONNECTIONS, { color: '#1c6e14', lineWidth: 3 });
+        drawLandmarks(canvasCtx, results.poseLandmarks, { color: '#cf6509', lineWidth: 1 });
 
 
         //console.log("X", Math.round(results.poseLandmarks[0].x * 1280), "Y", Math.round(results.poseLandmarks[0].y * 720))
@@ -48,6 +48,7 @@ function mediapipe() {
 
         // grid.updateLandmarks(results.poseWorldLandmarks);
     }
+
     function conversion(poseLandmarks) {
         var convertedPoseLandmark = { x: 0, y: 0 }
 
@@ -60,7 +61,7 @@ function mediapipe() {
 
     function dibujarCirculo(canvasCtx, poseLandmarks, x, y) {
         canvasCtx.beginPath();
-        canvasCtx.arc(x, y, 50, 0, 2 * Math.PI);
+        canvasCtx.arc(x, y, 70, 0, 40 * Math.PI);
         canvasCtx.stroke();
     }
 
@@ -83,7 +84,7 @@ function mediapipe() {
 
 
     const camera = new Camera(videoElement, {
-        onFrame: async () => {
+        onFrame: async() => {
             await pose.send({ image: videoElement });
         },
         width: 1280,
