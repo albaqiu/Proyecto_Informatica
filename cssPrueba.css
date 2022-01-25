@@ -165,7 +165,7 @@ body {
     -webkit-box-shadow: 6px 5px 24px #666666;
     -moz-box-shadow: 6px 5px 24px #094e07;
     box-shadow: 6px 5px 24px #1c6e14;
-    font-family: Arial;
+    font-family: 'Josefin Sans', sans-serif;
     color: #c4f7c2;
     font-size: 27px;
     padding: 19px;
@@ -176,13 +176,13 @@ body {
 }
 
 .otroBoton {
-    d -webkit-border-radius: 28;
+    -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
     text-shadow: 3px 2px 1px #044707;
     -webkit-box-shadow: 6px 5px 24px #666666;
     -moz-box-shadow: 6px 5px 24px #094e07;
-    box-shadow: 6px 5px 24px #c0650e;
+    box-shadow: 6px 5px 24px #1c6e14;
     font-family: 'Josefin Sans', sans-serif;
     color: #c4f7c2;
     font-size: 27px;
@@ -210,4 +210,5 @@ body {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    box-shadow: 3px 3px #2a8d11, -1em 0 0.4em #154d07;
 }
