@@ -12,10 +12,10 @@ function mediapipe() {
     const canvasCtx = canvasElement.getContext('2d');
     const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
     // const grid = new LandmarkGrid(landmarkContainer);
-    var coordX = Math.random() * window.innerWidth
-    var coordY = Math.random() * window.innerHeight
-    var touched = false
+    var coordX = Math.round(Math.random() * window.innerWidth)
+    var coordY = Math.round(Math.random() * window.innerHeight)
     const hands = [16, 17, 18, 19, 20, 21, 22]
+    var touched = false
     var posicion
 
     // Funcion que se corre en bucle
@@ -25,7 +25,7 @@ function mediapipe() {
             //     grid.updateLandmarks([]);
             return;
         }
-
+        console.log(touched, "primero")
         canvasElement.height = window.innerHeight
         canvasElement.width = window.innerWidth
         canvasCtx.save();
@@ -45,41 +45,19 @@ function mediapipe() {
         //posicion = conversion(results.poseLandmarks[16].x, results.poseLandmarks[16].y, window.innerWidth, window.innerHeight);
 
         // Juego
-        hands.forEach(element => {
-            posicion = conversion(results.poseLandmarks[element].x, results.poseLandmarks[element].y, window.innerWidth, window.innerHeight)
-        });
+
+        touched = juego(hands, canvasCtx, coordX, coordY, results, touched)
         if (touched) {
             drawCircle(canvasCtx, coordX, coordY, 0)
         } else {
             drawCircle(canvasCtx, coordX, coordY, 20)
-
-            posicion.x = Math.round(posicion.x)
-            coordX = Math.round(coordX)
-            posicion.y = Math.round(posicion.y)
-            coordY = Math.round(coordY)
-
-            let thresholdX = posicion.x / coordX
-            let thresholdY = posicion.y / coordY
-            let min = 0.9
-            let max = 1.1
-            if (thresholdX > min && thresholdX < max && thresholdY > min && thresholdY < max) {
-                console.log("SII")
-                touched = true
-            } else {
-                console.log("NOO")
-            }
-
         }
-
-
-
 
 
         //console.log("X", Math.round(results.poseLandmarks[0].x * 1280), "Y", Math.round(results.poseLandmarks[0].y * 720))
         // var puntos = conversion(results.poseLandmarks)
         // dibujarCirculo(canvasCtx, results.poseLandmarks, puntos.x, puntos.y)
         //console.log("X", puntos.x, "Y", puntos.y)
-
 
 
 
