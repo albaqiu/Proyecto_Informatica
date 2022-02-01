@@ -1,10 +1,10 @@
 function drawCircle(canvasCtx, coordX, coordY, radius = 20) {
     canvasCtx.beginPath();
     canvasCtx.arc(coordX, coordY, radius, 0, 2 * Math.PI, false);
-    canvasCtx.fillStyle = 'red';
+    canvasCtx.fillStyle = 'lightblue';
+    canvasCtx.shadowBlur = 30;
     canvasCtx.fill();
-    canvasCtx.lineWidth = 5;
-    canvasCtx.strokeStyle = '#AA8898';
+    canvasCtx.strokeStyle = 'lightblue';
     canvasCtx.stroke();
 }
 
@@ -31,4 +31,23 @@ function juego(hands, canvasCtx, coordX, coordY, results, touched) {
     });
 
     return touched
+}
+
+
+function getRandomCoord() {
+    var randomPoints = { x: 0, y: 0 }
+    var xRemoved = 250
+    var yRemoved = 150
+
+    //console.log("min x, y", xRemoved, yRemoved)
+    //console.log("max x, y", window.innerWidth - xRemoved, window.innerHeight - yRemoved)
+
+    // for (const x of Array(20).keys()) {
+    //     console.log(Math.round(Math.random() * (window.innerWidth - xRemoved) + xRemoved))
+    // }
+
+    randomPoints.x = Math.round(Math.random() * (window.innerWidth - xRemoved) + xRemoved / 2)
+    randomPoints.y = Math.round(Math.random() * (window.innerHeight - yRemoved) + yRemoved / 2)
+
+    return randomPoints
 }
