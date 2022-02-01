@@ -12,8 +12,11 @@ function mediapipe() {
     const canvasCtx = canvasElement.getContext('2d');
     const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
     // const grid = new LandmarkGrid(landmarkContainer);
-    var coordX = Math.round(Math.random() * window.innerWidth)
-    var coordY = Math.round(Math.random() * window.innerHeight)
+    var randomPoint = getRandomCoord()
+    var points = 0
+
+
+
     const hands = [16, 17, 18, 19, 20, 21, 22]
     var touched = false
     var posicion
@@ -25,7 +28,6 @@ function mediapipe() {
             //     grid.updateLandmarks([]);
             return;
         }
-        console.log(touched, "primero")
         canvasElement.height = window.innerHeight
         canvasElement.width = window.innerWidth
         canvasCtx.save();
@@ -46,20 +48,21 @@ function mediapipe() {
 
         // Juego
 
-        touched = juego(hands, canvasCtx, coordX, coordY, results, touched)
+        touched = juego(hands, canvasCtx, randomPoint.x, randomPoint.y, results, touched)
         if (touched) {
-            drawCircle(canvasCtx, coordX, coordY, 0)
+            drawCircle(canvasCtx, randomPoint.x, randomPoint.y, 0)
+            randomPoint = getRandomCoord()
+            touched = false
+            points++
+            console.log(points)
         } else {
-            drawCircle(canvasCtx, coordX, coordY, 20)
+            drawCircle(canvasCtx, randomPoint.x, randomPoint.y, 30)
         }
-
 
         //console.log("X", Math.round(results.poseLandmarks[0].x * 1280), "Y", Math.round(results.poseLandmarks[0].y * 720))
         // var puntos = conversion(results.poseLandmarks)
         // dibujarCirculo(canvasCtx, results.poseLandmarks, puntos.x, puntos.y)
         //console.log("X", puntos.x, "Y", puntos.y)
-
-
 
         canvasCtx.restore();
         // grid.updateLandmarks(results.poseWorldLandmarks);
