@@ -1,10 +1,11 @@
 function drawCircle(canvasCtx, coordX, coordY, radius = 20) {
     canvasCtx.beginPath();
     canvasCtx.arc(coordX, coordY, radius, 0, 2 * Math.PI, false);
-    canvasCtx.fillStyle = 'lightblue';
+    canvasCtx.font = '48px serif'
+    canvasCtx.fillStyle = 'orange';
     canvasCtx.shadowBlur = 30;
     canvasCtx.fill();
-    canvasCtx.strokeStyle = 'lightblue';
+    canvasCtx.strokeStyle = 'green';
     canvasCtx.stroke();
 }
 
@@ -50,4 +51,9 @@ function getRandomCoord() {
     randomPoints.y = Math.round(Math.random() * (window.innerHeight - yRemoved) + yRemoved / 2)
 
     return randomPoints
+}
+
+function drawScore(puntuacion) {
+    var puntos = document.getElementById("contadorPuntos");
+    puntos.innerHTML = puntuacion
 }

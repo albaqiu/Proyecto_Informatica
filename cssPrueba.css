@@ -217,3 +217,24 @@ body {
     transform: rotateY(180deg);
     /* border: 10px solid #154d07; */
 }
+
+#contadorPuntos {
+    font-family: 'Josefin Sans', sans-serif;
+    color: orange;
+    position: fixed;
+    top: 0;
+    margin-left: 70px;
+    font-size: 100px;
+}
+
+.botonSalir {
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* margin-left: 70px; */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}

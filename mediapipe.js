@@ -47,14 +47,14 @@ function mediapipe() {
         //posicion = conversion(results.poseLandmarks[16].x, results.poseLandmarks[16].y, window.innerWidth, window.innerHeight);
 
         // Juego
-
         touched = juego(hands, canvasCtx, randomPoint.x, randomPoint.y, results, touched)
         if (touched) {
             drawCircle(canvasCtx, randomPoint.x, randomPoint.y, 0)
+            drawScore(points)
             randomPoint = getRandomCoord()
-            touched = false
             points++
             console.log(points)
+            touched = false
         } else {
             drawCircle(canvasCtx, randomPoint.x, randomPoint.y, 30)
         }
@@ -67,7 +67,6 @@ function mediapipe() {
         canvasCtx.restore();
         // grid.updateLandmarks(results.poseWorldLandmarks);
     }
-
 
     //Creación del objeto pose instanciado de mediapipe
     const pose = new Pose({
