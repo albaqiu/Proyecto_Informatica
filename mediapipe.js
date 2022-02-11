@@ -13,7 +13,7 @@ function mediapipe() {
     const landmarkContainer = document.getElementsByClassName('landmark-grid-container')[0];
     // const grid = new LandmarkGrid(landmarkContainer);
     var randomPoint = getRandomCoord()
-    var points = 0
+    var points = 1
     var boing = new Audio("audios/boing.mp3")
 
 
