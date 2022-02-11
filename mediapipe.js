@@ -14,6 +14,7 @@ function mediapipe() {
     // const grid = new LandmarkGrid(landmarkContainer);
     var randomPoint = getRandomCoord()
     var points = 0
+    var boing = new Audio("audios/boing.mp3")
 
 
 
@@ -54,6 +55,7 @@ function mediapipe() {
             randomPoint = getRandomCoord()
             points++
             console.log(points)
+            boing.play()
             touched = false
         } else {
             drawCircle(canvasCtx, randomPoint.x, randomPoint.y, 30)
