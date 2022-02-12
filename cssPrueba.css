@@ -219,10 +219,10 @@ body {
 
 #contadorPuntos {
     font-family: 'Josefin Sans', sans-serif;
-    color: orange;
+    color: red;
     position: fixed;
-    top: 0;
-    margin-left: 70px;
+    top: 10px;
+    left: 100px;
     font-size: 100px;
 }
 
@@ -230,10 +230,9 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: black;
     position: fixed;
-    bottom: 0;
-    right: 0;
-    /* margin-left: 70px; */
-    margin-right: 20px;
-    margin-bottom: 20px;
+    bottom: 20px;
+    right: 20px;
     font-size: 20px;
+    padding: 7px 12px;
+    border-radius: 10px;
 }
