@@ -160,3 +160,27 @@ body {
     padding: 7px 12px;
     border-radius: 10px;
 }
+
+.recuadro {
+    display: flex;
+    background: #e2fdf4;
+    /* color: #2a990e; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    padding: 40px;
+    border: 10px solid #2a990e;
+    border-radius: 150px;
+    width: 700px;
+    height: 400px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px #2a8d11, -1em 0 0.4em #154d07;
+    position: fixed;
+    bottom: 30px;
+    right: 320px;
+}
