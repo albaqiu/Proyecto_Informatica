@@ -1,7 +1,3 @@
-/*@import url("//fonts.googleapis.com/css?family=Pacifico&text=Pure");
-@import url("//fonts.googleapis.com/css?family=Roboto:700&text=css");
-@import url("//fonts.googleapis.com/css?family=Kaushan+Script&text=!");*/
-
 body {
     min-height: 450px;
     height: 100vh;
@@ -155,17 +151,12 @@ body {
 }
 
 .botonvolver {
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    text-shadow: 3px 2px 1px #044707;
-    -webkit-box-shadow: 6px 5px 24px #666666;
-    -moz-box-shadow: 6px 5px 24px #094e07;
-    box-shadow: 6px 5px 24px #1c6e14;
-    font-family: Arial;
-    color: #c4f7c2;
-    font-size: 27px;
-    padding: 19px;
-    text-decoration: none;
-    margin-top: 30%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    padding: 7px 12px;
+    border-radius: 10px;
 }
